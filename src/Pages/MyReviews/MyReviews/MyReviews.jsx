@@ -12,7 +12,7 @@ const MyReviews = () => {
     useTitle('My Review');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/user-reviews?email=${user?.email}`, {
+        fetch(`https://healthpursue-server.vercel.app/user-reviews?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem("token")}`
             }
@@ -44,7 +44,7 @@ const MyReviews = () => {
         }).then((result) => {
 
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/user-reviews/${id}`, {
+                fetch(`https://healthpursue-server.vercel.app/user-reviews/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
