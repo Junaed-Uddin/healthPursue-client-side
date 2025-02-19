@@ -25,7 +25,7 @@ const Register = () => {
       .then((res) => {
         const user = res.user;
         console.log(user);
-        toast.success("successfully registered");
+        toast.success("successfully registered. Please Login");
         updateUser({
           displayName: name,
           photoURL: image,
